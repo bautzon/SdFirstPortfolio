@@ -6,6 +6,11 @@ class Main {
     // calling the class and method to get coordinates from user
     GetPoints getpointsObj = new GetPoints();
     getpointsObj.getPoints();
+
+// Calling the Rectangle constructor
+    //Rectangles rectanglesObj = new Rectangles();
+    //rectanglesObj.rectangles();
+
  
     //Circle area and circumference
       double radius = 5;
