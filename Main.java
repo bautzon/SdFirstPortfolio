@@ -19,16 +19,22 @@ class Main {
     //circle check coordinates
       double x = 10, y = 10;  
 
-      if (Circle.insideOrNot(circle_x, circle_y, radius, x, y)){ 
-            System.out.print("Inside"); 
+      if (circle.isInside()){ 
+            System.out.println("Inside"); 
       }else{
-            System.out.print("Outside");
+            System.out.println("Outside");
       }
 
       //triangle are aand circumference
-      Shapes triangle = new Triangles(1, 1, 1, 1, 1, 1);
+      Shapes triangle = new Triangles(10, 11, 16, 17, 15, 12);
       System.out.println("Triangle area " + triangle.area());
       System.out.println("Triangle circumference " + triangle.circumference());
+      
+      if (triangle.isInside()){
+          System.out.println("Inside");
+      } else {
+        System.out.println("Outside");
+      }
 
   }
 }

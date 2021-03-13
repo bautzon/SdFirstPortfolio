@@ -1,5 +1,8 @@
 public class Circle extends Shapes {
 
+
+    double cir_y = 10;
+    double cir_x = 10;
     double radius;
     double circle_x, circle_y;
     final double pi = Math.PI;
@@ -10,11 +13,12 @@ public class Circle extends Shapes {
         this.circle_x = circle_x;
     }
  
-    //@Override
+   
     public double area() {
         // A = π r^2
         return pi * Math.pow(radius, 2);
     }
+
 
     public double circumference() {
 
@@ -22,12 +26,12 @@ public class Circle extends Shapes {
         return 2 * pi * radius;
     }
     
-    //@Override
-    public static boolean insideOrNot(double circle_x, double circle_y, double radius, double x, double y) { 
+ 
+    public boolean isInside() { 
     // Compare radius of circle with distance  
     // of its center from given point 
-    if ((x - circle_x) * (x - circle_x) + 
-        (y - circle_y) * (y - circle_y) <= radius * radius) {
+    if ((cir_x - circle_x) * (cir_x - circle_x) + 
+        (cir_y - circle_y) * (cir_y - circle_y) <= radius * radius) {
       // System.out.println("Is inside");
       return true; 
     } else {
