@@ -7,39 +7,38 @@ class Main {
     GetPoints getpointsObj = new GetPoints();
     getpointsObj.getPoints();
 
-// Calling the Rectangle constructor
-    //Rectangles rectanglesObj = new Rectangles();
-    //rectanglesObj.rectangles();
-
- 
     //Circle area and circumference
-      double radius = 5;
-      double circle_x = 20;
-      double circle_y = 30;
-      Shapes circle = new Circle(radius, circle_x, circle_y);
-      System.out.println("Circle radius" + radius);
+
+      Circle circle = new Circle(5, 5, 5, 5, 5);
+      System.out.println("Circle radius " + circle.getRad());
       System.out.println("Circle area " + circle.area());
       System.out.println("Circle circumference " + circle.circumference());
-      
-    //circle check coordinates
-      double x = 10, y = 10;  
+      circle.isInside();
 
-      if (circle.isInside()){ 
-            System.out.println("Inside"); 
-      }else{
-            System.out.println("Outside");
-      }
+    // rectangles area and circumference
+    //public Rectangle (double x1, double y1, double x2, double y2, double x3, double y3, double x4, double y4, double x, double y)
+
+      Rectangle rect = new Rectangle(3, 1, 7, 4, 5, 5, 5, 5, 10, 10);
+      System.out.println("Rectangle area " + rect.area());
+      System.out.println("Rectangle circumference " + rect.circumference());
+      System.out.println("Rectangle circumference " + rect.circumference());
+      rect.isInside();
+
+
+
 
       //triangle are aand circumference
-      Shapes triangle = new Triangles(10, 11, 16, 17, 15, 12);
-      System.out.println("Triangle area " + triangle.area());
-      System.out.println("Triangle circumference " + triangle.circumference());
-      
-      if (triangle.isInside()){
-          System.out.println("Inside");
-      } else {
-        System.out.println("Outside");
-      }
+    Shapes triangle = new Triangles(10, 11, 16, 17, 15, 12);
+    //get the Centroid of a triangle
+    Triangles.TriOC(10, 11, 16, 17, 15, 12);
 
+    System.out.println("Triangle area " + triangle.area());
+    System.out.println("Triangle circumference " + triangle.circumference());
+      
+    if (triangle.isInside()){
+      System.out.println("Inside the Triangle");
+    } else {
+      System.out.println("Outside the Triangle");
+    }
   }
 }
