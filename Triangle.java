@@ -1,4 +1,3 @@
-
 public class Triangle extends Shapes {
 
   //coordinates for points ABC in the Triangle
@@ -47,6 +46,9 @@ public class Triangle extends Shapes {
 
   public boolean isInside() {        
 
+
+//Area formula for a triangle given point
+//Area =1/2[x1(y2 - y3) + x2(y3 - y1) + x3(y1 - y2)]
        // Calculate area of triangle ABC
         double A = Math.abs((tri_x1*(tri_y2-tri_y3) + tri_x2*(tri_y3-tri_y1)+tri_x3*(tri_y1-tri_y2))/2.0); 
        
@@ -58,22 +60,23 @@ public class Triangle extends Shapes {
        
        // Calculate area of triangle PAB   
         double A3 = Math.abs((tri_x1*(tri_y2-tri_y) + tri_x2*(tri_y-tri_y1)+tri_x*(tri_y1-tri_y2))/2.0); 
-                
-       /*
-       Check if sum of A1, A2 and A3 is same as A
-       If yes then it's inside 
-       If no then it's outside
-       */
+      
         return (A == A1 + A2 + A3); 
-    } 
+    }
+
+
+  public double centerx () { 
+     //find the orthocentroid, cord x of a right triangle
+     double centerx = (tri_x3 + tri_x2 + tri_x1)/3;
+     //System.out.print("\n The Center of the triangle is found at (x,y): " + OCX + ", " + OCY);
+      return centerx; 
+
+    }
+    public double centery () { 
+     //find the orthocentroid cord y of a right triangle
+     double centery = (tri_y3+tri_y2+tri_y1)/3;
+     //System.out.print("The Center of the triangle is found at (x,y): " + OCX + ", " + OCY);
+      return centery; 
   
-  public static void center () { 
-     //find the orthocentroid of a right triangle
-     double OCX = (tri_x3+tri_x2+tri_x1)/3;
-     double OCY = (tri_y3+tri_y2+tri_y1)/3;
-     System.out.print("\n The Center of the triangle is found at (x,y): " + OCX + ", " + OCY);
-  }
+    }
 }
-
-
-//double tri_x3, double tri_x2, double tri_x1, double tri_y3,double tri_y2,double tri_y1

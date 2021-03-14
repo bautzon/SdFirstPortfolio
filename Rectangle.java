@@ -1,4 +1,6 @@
 
+
+
 public class Rectangle extends Shapes {
 
   private double x1;
@@ -107,10 +109,17 @@ public class Rectangle extends Shapes {
       // P = 2(h + l)
       return 2 * ((x2-x1) + (y2 - y1));
   }
+// Find the center of a rectangle
+  public double centerx() {
+    //find the center of the x- axis cord of a rectangle
+    double CRectX = (x2-x1)/2;
+    return CRectX;
+  }
 
-  public void center() {
-    //find the center of a rectangle
-    System.out.print("The center is at: "((x2-x1)/2) + ", " + ((y2-y1)/2));
+    public double centery() {
+    //find the center of the y-axis cord of a rectangle
+    double CRectY = (y2-y1)/2;
+    return CRectY;
   }
   
   //method if point (x,y) is inside the boundaries of rectangle

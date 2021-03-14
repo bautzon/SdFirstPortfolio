@@ -1,56 +1,30 @@
 public class Circle extends Shapes {
 
     //private instance variables
-
-    double x;
-    double y; 
-    double rad;
-
-    // instance variables userinput coordinates
-    double x1;
-    double y1;
-
-    final double pi = Math.PI;
+  private double x1;
+  private double y1;
+  private double x2;
+  private double y2;
+//point for is inside test 
+  private double x;
+  private double y;
+  private double rad;
+  final double pi = Math.PI;
 
     // Constructs a Circle with given inputs
+public Circle (double x1, double y1, double x2, double y2, double x, double y, double rad) {
+    this.x1 = x1;
+    this.y1 = y1;
+    this.x2 = x2;
+    this.y2 = y2;
+// point
+    this.x = x;
+    this.y = y;
+    this.rad = rad;
+  }
 
-    public Circle(double x, double y, double rad, double x1, double y1) {
-        this.x = x;
-        this.y = y;
-        this.rad = rad;
-        this.y1 = y1;
-        this.x1 = x1;
-    }
-
-    // Getters and setters to gain indirect acces to variable
-
-    public double getX() {
-        return x;
-    }
-
-    public void setX(double x) {
-        this.x = x;
-    }
-
-    public double getY() {
-        return y;
-    }
-
-    public void setY(double y) {
-        this.y = y;
-    }
-
-    public double getRad() {
-        return rad;
-    }
-
-    public void setRad(double rad) {
-        this.rad = rad;
-    }
-
-
-    // getters and setters for coordinates
-
+    // Getters and setters to gain indirect access to variable
+   // getters and setters for coordinates
     public double getX1() {
         return x1;
     }
@@ -63,9 +37,38 @@ public class Circle extends Shapes {
     public void setY1(double y1) {
         this.y1 = y1;
     }
+    public double getX2() {
+        return x2;
+    }
+    public void setX2(double x2) {
+        this.x2 = x2;
+    }
+    public double getY2() {
+        return y2;
+    }
+    public void setY2(double y2) {
+        this.y2 = y2; 
+    }
+    public void setX(double x){
+      this.x = x;
+    }
+    public double getX(double X){
+      return x;
+    }
+        public void setY(double y){
+      this.y = y;
+    }
+    public double getY(double y){
+      return y;
+    }
+    public void setRad(double rad) {
+        this.rad = rad;
+    }
+    public double getRad() {
+        return rad;
+    }
 
     // Methods
-
     public double area() {
         // A = π r^2
         return pi * Math.pow(rad, 2);
@@ -76,12 +79,14 @@ public class Circle extends Shapes {
         return 2 * pi * rad;
     }
 
-    public void center(userinput) {
-      //Given from user input
-      System.out.print("The Center is found at: " + x1 ", " y1)
-      return x1, y1;
+    public double centerx() {
+      return x1;
     }
-    
+
+    public double centery() {
+      return y1;
+    }
+
     public boolean isInside() {
       if ((x1 - x) * (x1 - x) + (y1  - y) * (y1 - y) <= rad * rad) {
         System.out.println("Is Inside Circle");
@@ -91,6 +96,5 @@ public class Circle extends Shapes {
         System.out.println("Is Outside Circle");
         return false;
       } 
-    }
-    
+    } 
 }
