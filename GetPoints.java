@@ -1,3 +1,4 @@
+/*
 import java.util.Scanner;
 import java.lang.Math.*;
 import java.io.*;
@@ -22,7 +23,7 @@ public class GetPoints {
     this.y2 = y2;
 }
 */
-
+/*
 // getters and setters
   public double getX1() {
       return x1;

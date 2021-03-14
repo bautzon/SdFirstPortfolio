@@ -2,13 +2,12 @@ import java.util.Scanner;
 import java.lang.Math.*;
 import java.io.*;
 
-// 
 class Main {
   
   public static void main(String[] args) {
       // calling the class and method to get coordinates from user
-      GetPoints getpointsObj = new GetPoints();
-     getpointsObj.getPoints();
+      //GetPoints getpointsObj = new GetPoints();
+     //getpointsObj.getPoints();
 
       //Circle area and circumference
      // public Circle (double x1, double y1, double x2,  double y2, double x, double y, double rad)
@@ -29,7 +28,6 @@ class Main {
       rect.isInside();
 
       //public Triangle(int tri_x1, int tri_y1, int tri_x2, int tri_y2, int tri_x3, int tri_y3)
-
       Triangle tri = new Triangle(1, 2, 3, 4, 5, 6);
       System.out.println("Triangle area " + tri.area());
       System.out.println("Triangle circumference " + tri.circumference());
@@ -41,15 +39,15 @@ class Main {
       double DC2R; // Distance from circle to Rectangle
       double DC2T; // Distance from circle to Triangle
       double DR2T; // Distance from Rectangle to Triangle
+      //Using the distance formular between the centroid of the different shapes q
       DC2R = Math.sqrt(Math.pow((circle.centerx() - rect.centerx()), 2) + Math.pow((circle.centery() - rect.centerx()), 2));
-      System.out.println(DC2R);
-      
+      System.out.println("the distance from the circle to the rectangle is: " + DC2R);
 
+      DC2T = Math.sqrt(Math.pow((circle.centerx() - tri.centerx()), 2) + Math.pow((circle.centery() - tri.centerx()), 2));
+      System.out.println("the distance from the circle to the triangle is: " + DC2R);
 
-/*
-       = Math.sqrt(Math.pow((x1 - x2), 2) + Math.pow((y1 - y2), 2)); //DS = Distance Between Shapes
-      System.out.println("The distance between the two points is: " + distancexy);
-*/
+      DR2T = Math.sqrt(Math.pow((rect.centerx() - tri.centerx()), 2) + Math.pow((rect.centery() - tri.centerx()), 2));
+      System.out.println("the distance from the rect to the triangle is: " + DC2R);
+
   }
-
 }

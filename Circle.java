@@ -1,6 +1,6 @@
 public class Circle extends Shapes {
 
-    //private instance variables
+//private instance variables
   private double x1;
   private double y1;
   private double x2;
@@ -11,7 +11,7 @@ public class Circle extends Shapes {
   private double rad;
   final double pi = Math.PI;
 
-    // Constructs a Circle with given inputs
+// Constructs a Circle with given inputs
 public Circle (double x1, double y1, double x2, double y2, double x, double y, double rad) {
     this.x1 = x1;
     this.y1 = y1;
@@ -23,8 +23,8 @@ public Circle (double x1, double y1, double x2, double y2, double x, double y, d
     this.rad = rad;
   }
 
-    // Getters and setters to gain indirect access to variable
-   // getters and setters for coordinates
+// Getters and setters to gain indirect access to variable
+// getters and setters for coordinates
     public double getX1() {
         return x1;
     }
