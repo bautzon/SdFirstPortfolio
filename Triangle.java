@@ -64,7 +64,6 @@ public class Triangle extends Shapes {
         return (A == A1 + A2 + A3); 
     }
 
-
   public double centerx () { 
      //find the orthocentroid, cord x of a right triangle
      double centerx = (tri_x3 + tri_x2 + tri_x1)/3;
