@@ -15,7 +15,7 @@ public class Circle extends Shapes {
   final double pi = Math.PI;
 
 // Constructs a Circle with given inputs
-public Circle (double x1, double y1, double x2, double y2, double x, double y, double rad) {
+public Circle (double x1, double y1, double x2, double y2, double x, double y) {
     this.x1 = x1;
     this.y1 = y1;
     this.x2 = x2;
@@ -23,7 +23,7 @@ public Circle (double x1, double y1, double x2, double y2, double x, double y, d
 // point
     this.x = x;
     this.y = y;
-	this.rad = rad;
+
 }
    // Calculating the radius from the distance between the two given points
   //public double radius = Math.sqrt(Math.pow((x2-x1),2)+Math.pow((y2-y1),2));
@@ -71,11 +71,19 @@ public Circle (double x1, double y1, double x2, double y2, double x, double y, d
     public void setRad(double rad) {
         this.rad = rad;
     }
+	
     public double getRad() {
         return rad;
     }
     
     // Methods
+
+    public double calculateRadius() {
+
+      return Math.sqrt(Math.pow((x2-x1),2)+Math.pow((y2-y1),2));
+
+    }
+	
     public double area() {
         // A = π r^2
         return pi * Math.pow(rad, 2);
@@ -95,13 +103,12 @@ public Circle (double x1, double y1, double x2, double y2, double x, double y, d
     }
 //https://www.geeksforgeeks.org/find-if-a-point-lies-inside-or-on-circle/
     public boolean isInside() {
-      if ((x1 - x) * (x1 - x) + (y1  - y) * (y1 - y) <= rad * rad) {
-        System.out.println("The Point is Inside Circle");
+      if ((x1 - x) * (x1 - x) + (y1  - y) * (y1 - y) <= rad) {
         return true; 
         
-      } else {
+    } else {
         System.out.println("The point is Outside Circle");
         return false;
-      } 
     } 
+}
 }
