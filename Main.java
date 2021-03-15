@@ -10,9 +10,9 @@ class Main {
      //getpointsObj.getPoints();
 
       //Circle area and circumference
-     // public Circle (double x1, double y1, double x2,  double y2, double x, double y, double rad)
+      // public Circle (double x1, double y1, double x2,  double y2,  double x, double y, double rad)
 
-      Circle circle = new Circle(5, 5, 3, 4, 4, 4, 4);
+      Circle circle = new Circle(10, 10, 20, 20, 5, 30);
       System.out.println("Circle radius " + circle.getRad());
       System.out.println("Circle area " + circle.area());
       System.out.println("Circle circumference " + circle.circumference());

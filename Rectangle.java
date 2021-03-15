@@ -3,17 +3,7 @@
 
 public class Rectangle extends Shapes {
 
-  private double x1;
-  private double y1;
-  private double x2;
-  private double y2;
-  private double x3;
-  private double y3;
-  private double x4;
-  private double y4;
-
-  private double x;
-  private double y;
+  private double x1, y1, x2, y2, x3, y3, x4, y4, x, y;
 
   // rectangle constructor
   public Rectangle (double x1, double y1, double x2, double y2, double x3, double y3, double x4, double y4, double x, double y) {
