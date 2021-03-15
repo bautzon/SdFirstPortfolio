@@ -47,7 +47,6 @@ public class Triangle extends Shapes {
 
   public boolean isInside() {        
 		//Area formula for a triangle given point
-		//Area =1/2[x1(y2 - y3) + x2(y3 - y1) + x3(y1 - y2)]
         // Calculate area of triangle ABC
         double A = Math.abs((x1*(y2-y3) + x2*(y3-y1)+x3*(y1-y2))/2.0); 
        
@@ -72,14 +71,14 @@ public class Triangle extends Shapes {
   public double centerx () { 
      //find the orthocentroid, cord x of a right triangle
      double centerx = (x3 + x2 + x1)/3;
-     //System.out.print("\n The Center of the triangle is found at (x,y): " + OCX + ", " + OCY);
+
       return centerx; 
 
     }
     public double centery () { 
      //find the orthocentroid cord y of a right triangle
      double centery = (y3+y2+y1)/3;
-     //System.out.print("The Center of the triangle is found at (x,y): " + OCX + ", " + OCY);
+
       return centery; 
   
     }

@@ -1,23 +1,22 @@
 public class Rectangle extends Shapes {
 
-  private double x1, y1, x2, y2, x3, y3, x4, y4, x, y;
+	//First two input reference the input, x,y refer to the point to check whether or not is inside the shape
+  	private double x1, y1, x2, y2, x, y;
 
-  // rectangle constructor
-  public Rectangle (double x1, double y1, double x2, double y2, double x, double y){
+  	// rectangle constructor
+  	public Rectangle (double x1, double y1, double x2, double y2, double x, double y){
 	  //, double x4, double y4, double x, double y) {
     this.x1 = x1;
     this.y1 = y1;
     this.x2 = x2;
     this.y2 = y2;
-    this.x3 = x2;
-    this.y3 = y1;
-    this.x4 = x1;
-    this.y4 = y2;
+    
+    //reference point
     this.x = x;
     this.y = y;
   }
   
-  // getters and setters
+  	// getters and setters
     public double getX1() {
         return x1;
     }
@@ -42,32 +41,7 @@ public class Rectangle extends Shapes {
     public void setY2(double y2) {
         this.y2 = y2;
     }
-	/*
-    public double getX3() {
-        return x3;
-    }
-    public void setX3(double x3) {
-        this.x3 = x2;
-    }
-    public double getY3() {
-        return y3;
-    }
-    public void setY3(double y3) {
-        this.y3 = y1;
-    }
-    public double getX4() {
-        return x4;
-    }
-    public void setX4(double x4) {
-        this.x4 = x1;
-    }
-    public double getY4() {
-        return y4;
-    }
-    public void setY4(double y4) {
-        this.y4 = y2;
-    }
-*/
+	
     // point getter and setters
     public double getX() {
         return x;
@@ -86,30 +60,30 @@ public class Rectangle extends Shapes {
     }
 
 
-  //methods
-  public double area() {
+  	//methods
+  	public double area() {
       // A = Length * Height
       return (x2-x1) * (y2 - y1);    
-  }
+  	}
 
-  public double circumference() {
+  	public double circumference() {
       // P = 2(h + l)
       return 2 * ((x2-x1) + (y2 - y1));
-  }
-// Find the center of a rectangle
-  public double centerx() {
+ 	 }
+	// Find the center of a rectangle
+  	public double centerx() {
     //find the center of the x- axis cord of a rectangle
     double CRectX = (x2-x1)/2;
     return CRectX;
-  }
+  	}
 
     public double centery() {
     //find the center of the y-axis cord of a rectangle
     double CRectY = (y2-y1)/2;
     return CRectY;
-  }
+  	}
   
-  //method if point (x,y) is inside the boundaries of rectangle
+  	//method if point (x,y) is inside the boundaries of rectangle
     public boolean isInside() {
       if ((x < x2 || x < x1 ) && (y < y2 || y > y1 )) {
           System.out.println("Is Inside Rectangle");
@@ -119,7 +93,6 @@ public class Rectangle extends Shapes {
           return false;
         } 
     }
-
 }
 
 

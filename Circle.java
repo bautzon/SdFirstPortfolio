@@ -26,7 +26,6 @@ public Circle (double x1, double y1, double x2, double y2, double x, double y) {
 
 }
    // Calculating the radius from the distance between the two given points
-  //public double radius = Math.sqrt(Math.pow((x2-x1),2)+Math.pow((y2-y1),2));
 
 // Getters and setters to gain indirect access to variable
 // getters and setters for coordinates
@@ -66,7 +65,7 @@ public Circle (double x1, double y1, double x2, double y2, double x, double y) {
     public double getY(double y){
       return y;
     }
-	//Vi kunne ikke finde ud
+
     //double radius = Math.sqrt(Math.pow((x2-x1),2)+Math.pow((y2-y1),2));
     public void setRad(double rad) {
         this.rad = rad;
