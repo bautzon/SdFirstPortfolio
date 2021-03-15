@@ -1,26 +1,23 @@
-
-
-
 public class Rectangle extends Shapes {
 
   private double x1, y1, x2, y2, x3, y3, x4, y4, x, y;
 
   // rectangle constructor
-  public Rectangle (double x1, double y1, double x2, double y2, double x3, double y3, double x4, double y4, double x, double y) {
+  public Rectangle (double x1, double y1, double x2, double y2, double x, double y){
+	  //, double x4, double y4, double x, double y) {
     this.x1 = x1;
     this.y1 = y1;
     this.x2 = x2;
     this.y2 = y2;
-    this.x3 = x3;
-    this.y3 = y3;
-    this.x4 = x4;
-    this.y4 = y4;
+    this.x3 = x2;
+    this.y3 = y1;
+    this.x4 = x1;
+    this.y4 = y2;
     this.x = x;
     this.y = y;
   }
   
   // getters and setters
-
     public double getX1() {
         return x1;
     }
@@ -45,33 +42,33 @@ public class Rectangle extends Shapes {
     public void setY2(double y2) {
         this.y2 = y2;
     }
+	/*
     public double getX3() {
         return x3;
     }
     public void setX3(double x3) {
-        this.x3 = x3;
+        this.x3 = x2;
     }
     public double getY3() {
         return y3;
     }
     public void setY3(double y3) {
-        this.y3 = y3;
+        this.y3 = y1;
     }
     public double getX4() {
         return x4;
     }
     public void setX4(double x4) {
-        this.x4 = x4;
+        this.x4 = x1;
     }
     public double getY4() {
         return y4;
     }
     public void setY4(double y4) {
-        this.y4 = y4;
+        this.y4 = y2;
     }
-
+*/
     // point getter and setters
-
     public double getX() {
         return x;
     }
