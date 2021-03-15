@@ -8,7 +8,7 @@ class Main {
     public void testRectArea() {
     
     // create new object 
-    Rectangle rect1 = new Rectangle(3, 1, 7, 4, 5, 5);
+    Rectangle rect1 = new Rectangle(1, 1, 3, 3, 5, 5);
     assertEquals(4, rect1.area());
   }
 
@@ -20,7 +20,7 @@ class Main {
 
       //Circle area and circumference
       // public Circle (double x1, double y1, double x2,  double y2,  double x, double y, double rad)
-		//Mistake below as the radius should be calculated as a result of the distance formula between the two points given. However, this caused us a lot of issues trying to resolve.
+		//Mistake below as the radius should be calculated as //a result of the distance formula between the two //points given. However, this caused us a lot of //issues trying to resolve.
       Circle circle = new Circle(10, 10, 20, 20, 5, 30, 14);
       System.out.println("Circle radius " + circle.getRad());
       System.out.println("Circle area " + circle.area());

@@ -93,7 +93,7 @@ public Circle (double x1, double y1, double x2, double y2, double x, double y, d
     public double centery() {
       return y1;
     }
-
+//https://www.geeksforgeeks.org/find-if-a-point-lies-inside-or-on-circle/
     public boolean isInside() {
       if ((x1 - x) * (x1 - x) + (y1  - y) * (y1 - y) <= rad * rad) {
         System.out.println("The Point is Inside Circle");

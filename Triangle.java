@@ -20,6 +20,7 @@ public class Triangle extends Shapes {
   }
 
   public double area() { 
+	  //https://www.geeksforgeeks.org/c-program-find-area-triangle/
     //Calculate the area of the triangle 
        return Math.abs((x1*(y2-y3) + x2*(y3-y1)+x3*(y1-y2))/2.0); 
     } 
@@ -45,12 +46,12 @@ public class Triangle extends Shapes {
   }
 
   public boolean isInside() {        
-//Area formula for a triangle given point
-//Area =1/2[x1(y2 - y3) + x2(y3 - y1) + x3(y1 - y2)]
-       // Calculate area of triangle ABC
+		//Area formula for a triangle given point
+		//Area =1/2[x1(y2 - y3) + x2(y3 - y1) + x3(y1 - y2)]
+        // Calculate area of triangle ABC
         double A = Math.abs((x1*(y2-y3) + x2*(y3-y1)+x3*(y1-y2))/2.0); 
        
-       // Calculate area of triangle PBC 
+        // Calculate area of triangle PBC 
         double A1 = Math.abs((x*(y2-y3))+(x2*(y3-y))+(x3*(y-y2))/2.0); 
        
        // Calculate area of triangle PAC  
